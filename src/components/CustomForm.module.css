@@ -1,0 +1,4 @@
+.PokeForm{
+    display: flex;
+    flex-direction: column;
+}

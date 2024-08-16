@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import './App.css'
 import Card from './components/Card'
+import CustomForm from './components/CustomForm'
 
 function App() {
+  const [formData, setFormData] = useState(null);
+
+  const handleFormSubmit = (data) => {
+    setFormData(data);
+  };
 
   return (
     <div className='app'>
-      <h1>Este es el componente principal(app)</h1>
-      <Card data={"Componente app"} />
-      <form></form>
+      <h1>Asignador de MOTES</h1>
+      <CustomForm onSubmit = {handleFormSubmit}/>
+      <Card data={formData}/>
     </div>
   )
 }
